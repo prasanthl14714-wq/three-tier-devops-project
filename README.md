@@ -49,3 +49,9 @@ The backend server is located at `http://localhost:2727/`.
 ![Example of MYSQL Database](https://raw.githubusercontent.com/farooqashar/employees/readme_images/images/sql.png)
 
 
+## Architecture Diagram
+
+The following diagram shows the 3-tier application architecture, Jenkins CI/CD pipeline, Docker, Kubernetes (Minikube), and future AWS deployment.
+
+![3-Tier Application Architecture](assets/architecture-diagram.png)
+
