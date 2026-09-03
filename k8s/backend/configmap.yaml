@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: employee-backend-config
+  namespace: production
+data:
+  DB_NAME: "employeeSystem"
+  DB_PORT: "3306"
+  APP_ENV: "production"
+  LOG_LEVEL: "info"

@@ -17,7 +17,7 @@ function App() {
   const [employees, setEmployees] = useState([]);
 
   const handleSubmit = () => {
-    Axios.post("http://localhost:2727/create", {
+    Axios.post("/api/create", {
       name: name,
       age: age,
       country: country,
@@ -38,7 +38,7 @@ function App() {
   };
 
   const updateData = id => {
-    Axios.put("http://localhost:2727/update", {
+   Axios.put("/api/update", {
       id: id,
       wage: newWage
     }).then(data => {
@@ -62,7 +62,7 @@ function App() {
 
   const deleteData = id => {
     console.log("in frontend delete func");
-    Axios.delete(`http://localhost:2727/delete/${id}`).then(data => {
+    Axios.delete(`/api/delete/${id}`).then(data => {
       setEmployees(
         employees.filter(elt => {
           return elt.id !== id;
@@ -72,7 +72,7 @@ function App() {
   };
 
   const getEmployees = () => {
-    Axios.get("http://localhost:2727/employees").then(res => {
+    Axios.get("/api/employees").then(res => {
       setEmployees(res.data);
     });
   };
